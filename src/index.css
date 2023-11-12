@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components{
+    .appContainer{
+        @apply max-w-[1920px] px-5 md:px-[40px] lg:px-[70px] xl:px-[100px] mx-auto
+    }
+}
 
 
 @font-face {

@@ -1,25 +1,98 @@
+
 import logo from '../../assets/logo.svg'
+import { Link } from 'react-scroll';
+import './header.css'
+import { useState } from 'react';
 const Navbar = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [navScroll, setNavScroll] = useState(false);  
+    const menu = [
+        { name: "Home", to: "home" },
+        { name: "Games", to: "games" },
+        { name: "Studio", to: "studio" },
+        { name: "Contact", to: "contact" },
+    ]
+
+    const handleSetActive = (to) => {
+        if (to !== 'test1') {
+            const home = document.getElementById('home');
+            home.classList.remove('active');
+        }
+        console.log(to);
+    };
+
+    const handlewindowScroll = () => { 
+        if(window.scrollY >= 130){
+            setNavScroll(true)
+        }
+        else{
+            setNavScroll(false)
+        }
+     }
+
+
+    window.addEventListener('scroll', handlewindowScroll)
     return (
-        <nav className="bg-[#1e1e1e] bg-opacity-[60%] drop-shadow-2xl  border-red-500 max-w-[1920px] px-[100px]">
-            <div className="flex flex-wrap items-center justify-between mx-auto p-4">
+        <nav className={`appContainer bg-[#1e1e1e] bg-opacity-[70%] drop-shadow-2xl shadow-xl  font-Messiri ${navScroll?'py-0':'py-2'} sticky top-0 w-full z-50`}>
+            <div className="flex flex-wrap items-center justify-between mx-auto py-4">
                 <a
-                // style={{ backgroundImage: `url(${logo})` }}
-                href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src={logo} className="h-8 brightness-0 invert" alt="Logo" />
+                    // style={{ backgroundImage: `url(${logo})` }}
+                    href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src={logo} className="h-10 brightness-0 invert" alt="Logo" />
                 </a>
-                <button  type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default">
+                <button type="button" onClick={()=>setMenuOpen(!menuOpen)} className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg lg:hidden  focus:outline-none" aria-controls="navbar-default">
                     <span className="sr-only">Open main menu</span>
-                    <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
-                    </svg>
+                    {
+                        menuOpen?<span className='text-4xl text-white'><i className='bx bx-x'></i></span>
+                        :<span className='text-4xl text-white'><i className='bx bx-menu' ></i></span>
+                    }
+                    
                 </button>
-                <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-                    <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                        <li>
-                            <a href="#" className="block py-2 px-3 text-white rounded " aria-current="page">Home</a>
-                        </li>
-                      
+                <div className={`${menuOpen?'block':'hidden'} duration-1000  w-full lg:block lg:w-auto`} id="navbar-default">
+                   
+                    <ul className="font-medium flex flex-col py-4 lg:p-0 mt-4  lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 space-y-3 lg:space-y-0 duration-200">
+        
+
+                        {
+                            menu.map((item, index)  => {
+                                return (
+                                    <li key={index}>
+                                        <Link
+                                            className='block py-1 px-3 text-white rounded-full lg:text-xl text-4xl cursor-pointer'
+                                           
+                                            activeClass="active"
+                                            to={item.to}
+                                            spy={true}
+                                            smooth={true}
+                                            offset={50}
+                                            duration={200}
+                                            onSetActive={handleSetActive}
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    </li>
+                                )
+                            })
+                        }
+                        {/* <Link
+
+                            className='text-white active '
+                            activeClass="active"
+                            to="test1"
+                            spy={true}
+                            smooth={true}
+                            offset={50}
+                            duration={200}
+                            onSetActive={handleSetActive}
+                        >
+                            Test 1
+                        </Link> */}
+
+
+
+                        {/* <li>
+                            <NavLink to="#h1" className="block py-2 px-3 text-white rounded text-2xl">Home</NavLink>
+                        </li> */}
                     </ul>
                 </div>
             </div>
