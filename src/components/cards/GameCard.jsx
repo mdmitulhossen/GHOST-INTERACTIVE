@@ -2,7 +2,7 @@ import AnimatedSquare from "../AnimatedSquare";
 
 const GameCard = ({isFlexReverse}) => {
     return (
-        <div className={`flex ${isFlexReverse?'flex-row-reverse':''} lg:gap-10 items-center justify-center lg:px-20 mt-20 flex-wrap lg:flex-nowrap`}>
+        <div className={`flex ${isFlexReverse?'flex-row-reverse':''} lg:gap-10 items-center justify-center xl:px-[100px] lg:px-[40px] mt-20 flex-wrap lg:flex-nowrap`}>
             <div className="lg:ml-10">
                 <AnimatedSquare/>
             </div>

@@ -22,7 +22,7 @@ const Navbar = () => {
     };
 
     const handlewindowScroll = () => { 
-        if(window.scrollY >= 130){
+        if(window.scrollY >= 90){
             setNavScroll(true)
         }
         else{
@@ -64,7 +64,7 @@ const Navbar = () => {
                                             to={item.to}
                                             spy={true}
                                             smooth={true}
-                                            offset={50}
+                                            // offset={50}
                                             duration={200}
                                             onSetActive={handleSetActive}
                                         >

@@ -5,6 +5,7 @@ import HeaderSection from "./home/HeaderSection";
 import Title from "../components/Header/Title";
 import AnimatedSquare from "../components/AnimatedSquare";
 import GameCard from "../components/cards/GameCard";
+import StudioSection from "./home/StudioSection";
 
 
 const Home = () => {
@@ -25,15 +26,23 @@ const Home = () => {
                             <Title name='our games' />
                         </div>
                         <div className="mt-[100px]">
-                            <GameCard isFlexReverse={false}/>
+                            <GameCard isFlexReverse={false} />
                         </div>
                         <div className="mt-[150px]">
-                            <GameCard isFlexReverse={true}/>
+                            <GameCard isFlexReverse={true} />
                         </div>
                         <div className="mt-[150px]">
-                            <GameCard isFlexReverse={false}/>
+                            <GameCard isFlexReverse={false} />
                         </div>
                     </Element>
+                    <Element name="studio" className="element mt-12 md:mt-20">
+
+                        <div className="lg:mt-[200px] mt-[100px]">
+                            <StudioSection />
+                        </div>
+
+                    </Element>
+
                 </div>
             </div>
         </div>
