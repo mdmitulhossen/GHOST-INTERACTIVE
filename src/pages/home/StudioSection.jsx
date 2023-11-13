@@ -16,7 +16,7 @@ const StudioSection = () => {
                 <p className="font-Messiri text-lg lg:w-4/5">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                 </p>
-                <button className="bg-[#3F6CEE] font-semibold font-Messiri px-4 py-2 rounded-2xl flex justify-center items-center mx-auto lg:mx-0">Learn More</button>
+                <button className="appBtn rounded-2xl mx-auto lg:mx-0">Learn More</button>
             </div>
             <div className="lg:ml-10 relative flex justify-center w-full lg:w-auto">
                 <div className="lg:absolute lg:-right-[200px] lg:-top-[200px] w-full lg:w-auto flex justify-center items-center mt-[100px] lg:mt-0 pb-20 lg:pb-0">

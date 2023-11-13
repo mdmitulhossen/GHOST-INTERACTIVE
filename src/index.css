@@ -7,6 +7,9 @@
     .appContainer{
         @apply max-w-[1920px] px-5 md:px-[40px] lg:px-[70px] xl:px-[100px] mx-auto
     }
+    .appBtn{
+        @apply bg-[#3F6CEE] text-white font-semibold font-Messiri px-4 py-2  flex justify-center items-center hover:bg-white hover:text-[#3F6CEE] duration-200
+    }
 }
 
 
