@@ -7,12 +7,13 @@ import AnimatedSquare from "../components/AnimatedSquare";
 import GameCard from "../components/cards/GameCard";
 import StudioSection from "./home/StudioSection";
 import testGif from '../assets/game.gif'
+import Footer from "../components/footer/Footer";
 
 const Home = () => {
     return (
         <div
             style={{ backgroundImage: `url(${bg})` }}
-            className="bg-no-repeat bg-cover bg-center pb-10 bg-[#1e1e1e] bg-blend-darken">
+            className="bg-no-repeat bg-cover bg-center bg-[#1e1e1e] bg-blend-darken">
             <div className="">
                 <Navbar />
 
@@ -78,6 +79,10 @@ const Home = () => {
 
                     </Element>
 
+                </div>
+
+                <div className="mt-[150px]">
+                    <Footer/>
                 </div>
             </div>
         </div>
