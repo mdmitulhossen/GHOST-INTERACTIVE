@@ -48,7 +48,7 @@ const Home = () => {
 
     // iteractive section box animation
     const interectiveBox = {
-        hidden: { x: -100, y: -100, scale: 0.5 },
+        hidden: { x: -20, y: -20, scale: 0.7 },
         vissible: { x: 0, y: 0, scale: 1 }
     }
 
@@ -176,20 +176,20 @@ const Home = () => {
                                     data-aos-easing="linear"
                                     data-aos-offset="20"
                                     data-aos-duration="500"
-                                    type="text" placeholder="Email Address" className="border bg-white pl-6 pr-4  py-3 md:min-w-[300px] focus:outline-0 rounded-l-full rounded-r-lg" />
+                                    type="text" placeholder="Email Address" className="border bg-white pl-2 pr-2 md:pl-6 md:pr-4 py-1  md:py-3 md:min-w-[300px] focus:outline-0 rounded-l-full rounded-r-lg" />
                                 <button
                                     data-aos="fade-down-left"
                                     data-aos-easing="linear"
                                     data-aos-offset="20"
                                     data-aos-duration="500"
-                                    className="appBtn px-4 py-3 rounded-r-full md:min-w-[150px]">Sign Up</button>
+                                    className="appBtn px-2 py-1 md:px-4 md:py-3 rounded-r-full md:min-w-[150px]">Sign Up</button>
                             </div>
                         </div>
                     </Element>
 
                 </div>
 
-                <div className="mt-[150px]">
+                <div className="md:mt-[150px] mt-[100px]">
                     <Footer />
                 </div>
             </div>
