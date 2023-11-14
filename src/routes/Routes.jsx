@@ -10,14 +10,8 @@ const Routes = createBrowserRouter([
         children:[
             {
                 path:'/',
-                element:<Home/>
-            },
-            {
-                path:'/about',
-                element:<h1>About</h1>
-            },
-            {
-                path:'/#head6',
+                element:<Home/>,
+                loader: () => fetch('/gameData.json')
             }
         ]
     }

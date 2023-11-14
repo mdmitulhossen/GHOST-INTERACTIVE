@@ -7,30 +7,46 @@ import GameCard from "../components/cards/GameCard";
 import StudioSection from "./home/StudioSection";
 import testGif from '../assets/game.gif'
 import Footer from "../components/footer/Footer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Aos from "aos";
 import 'aos/dist/aos.css'
 import TextRevealAnimation from "../components/animation/TextRevealAnimation";
-import InterractiveSection from "./home/InterractiveSection";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { ScrollToTop } from "../components/ScrollToTop";
+import { useLoaderData } from "react-router-dom";
 
 
 const Home = () => {
+    const control = useAnimation();
+    const [ref, inView] = useInView();
+    const [gameData, setGameData] = useState([])
+    const [showMoreCount, setShowMoreCount] = useState(0)
+    const gdata = useLoaderData()
+    console.log(gameData)
+
+    useEffect(() => {
+        if (gdata?.length > 3) {
+            setGameData(gdata.slice(0, 3))
+        } else {
+            setGameData(gdata)
+        }
+    }, [gdata])
+
+    // handle show more game
+    const handleShowMoreGame = (count) => {
+        setGameData(gdata?.slice(0, 3+count))
+        setShowMoreCount(count)
+    }
+    // initialize AOS
     useEffect(() => {
         Aos.init();
     }, [])
 
-    // const ref = useRef(null);
-    const control = useAnimation();
-    const [ref, inView] = useInView();
-    // const isInView = useInView(ref, { once: true });
 
 
 
-
-
-
+    // iteractive section box animation
     const interectiveBox = {
         hidden: { x: -100, y: -100, scale: 0.5 },
         vissible: { x: 0, y: 0, scale: 1 }
@@ -42,11 +58,14 @@ const Home = () => {
         }
     }, [control, inView]);
 
+
+
     return (
         <div
             style={{ backgroundImage: `url(${bg})` }}
             className="bg-no-repeat bg-cover bg-center bg-[#1e1e1e] bg-blend-darken">
             <div className="">
+                <ScrollToTop />
                 <Navbar />
 
                 <div className="appContainer overflow-hidden">
@@ -58,7 +77,20 @@ const Home = () => {
                         <div className="w-full flex justify-center">
                             <Title name='our games' />
                         </div>
-                        <div className="mt-[100px]">
+
+                        {
+                            gameData && gameData?.map((game, index) => {
+                                return (
+                                    <div key={index} className="mt-16">
+                                        <GameCard
+                                            isFlexReverse={index % 2 === 0 ? false : true}
+                                            data={game}
+                                        />
+                                    </div>
+                                )
+                            })
+                        }
+                        {/* <div className="mt-[150px]">
                             <GameCard isFlexReverse={false} />
                         </div>
                         <div className="mt-[150px]">
@@ -66,11 +98,16 @@ const Home = () => {
                         </div>
                         <div className="mt-[150px]">
                             <GameCard isFlexReverse={false} />
+                        </div> */}
+                        <div className="mt-[150px] w-full flex justify-center">
+                            <button
+                              onClick={() => handleShowMoreGame(showMoreCount+1)}
+                                className="appBtn px-6 py-3 rounded-full">Show More</button>
                         </div>
                     </Element>
-                    <Element name="studio" className="element mt-12 md:mt-20">
+                    <Element name="studio" className="element mt-12 md:mt-16">
 
-                        <div className="lg:mt-[200px] mt-[100px]">
+                        <div className="lg:mt-[150px] mt-[100px]">
                             <StudioSection />
                         </div>
 
@@ -148,9 +185,6 @@ const Home = () => {
                                     className="appBtn px-4 py-3 rounded-r-full md:min-w-[150px]">Sign Up</button>
                             </div>
                         </div>
-
-
-
                     </Element>
 
                 </div>
