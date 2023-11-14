@@ -5,7 +5,7 @@ import './header.css'
 import { useState } from 'react';
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [navScroll, setNavScroll] = useState(false);  
+    const [navScroll, setNavScroll] = useState(false);
     const menu = [
         { name: "Home", to: "home" },
         { name: "Games", to: "games" },
@@ -20,45 +20,48 @@ const Navbar = () => {
         }
     };
 
-    const handlewindowScroll = () => { 
-        if(window.scrollY >= 60){
+    const handlewindowScroll = () => {
+        if (window.scrollY >= 60) {
             setNavScroll(true)
         }
-        else{
+        else {
             setNavScroll(false)
         }
-     }
+    }
 
 
     window.addEventListener('scroll', handlewindowScroll)
     return (
-        <nav className={`appContainer bg-[#1e1e1e] bg-opacity-[70%] drop-shadow-2xl shadow-xl  font-Messiri ${navScroll?'py-0':'py-2'} sticky top-0 w-full z-50`}>
+        <nav className={`appContainer bg-[#1e1e1e] bg-opacity-[70%] drop-shadow-2xl shadow-xl  font-Messiri ${navScroll ? 'py-0' : 'py-2'} sticky top-0 w-full z-50`}>
             <div className="flex flex-wrap items-center justify-between mx-auto py-4">
                 <a
                     // style={{ backgroundImage: `url(${logo})` }}
                     href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src={logo} className="h-10 brightness-0 invert" alt="Logo" />
                 </a>
-                <button type="button" onClick={()=>setMenuOpen(!menuOpen)} className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg lg:hidden  focus:outline-none" aria-controls="navbar-default">
+                <button type="button" onClick={() => setMenuOpen(!menuOpen)} className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg lg:hidden  focus:outline-none" aria-controls="navbar-default">
                     <span className="sr-only">Open main menu</span>
                     {
-                        menuOpen?<span className='text-4xl text-white'><i className='bx bx-x'></i></span>
-                        :<span className='text-4xl text-white'><i className='bx bx-menu' ></i></span>
+                        menuOpen ? <span className='text-4xl text-white'><i className='bx bx-x'></i></span>
+                            : <span className='text-4xl text-white'><i className='bx bx-menu' ></i></span>
                     }
-                    
+
                 </button>
-                <div className={`${menuOpen?'block':'hidden'} duration-1000  w-full lg:block lg:w-auto`} id="navbar-default">
-                   
+                <div className={`${menuOpen ? 'block' : 'hidden'} duration-1000  w-full lg:block lg:w-auto`} id="navbar-default">
+
                     <ul className="font-medium flex flex-col py-4 lg:p-0 mt-4  lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 space-y-3 lg:space-y-0 duration-200">
-        
+
 
                         {
-                            menu.map((item, index)  => {
+                            menu.map((item, index) => {
                                 return (
-                                    <li key={index}>
+                                    <li
+
+                                        key={index}>
                                         <Link
+                                            onClick={() => setMenuOpen(!menuOpen)}
                                             className='block py-1 px-3 text-white rounded-full lg:text-xl text-4xl cursor-pointer'
-                                           
+
                                             activeClass="active"
                                             to={item.to}
                                             spy={true}
