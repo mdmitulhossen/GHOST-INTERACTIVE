@@ -1,5 +1,6 @@
 
 import logo from '../../assets/logo.svg'
+import navBg from '../../assets/Header.png'
 import { Link } from 'react-scroll';
 import './header.css'
 import { useState } from 'react';
@@ -32,7 +33,9 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handlewindowScroll)
     return (
-        <nav className={`appContainer bg-[#1e1e1e] bg-opacity-[70%] drop-shadow-2xl shadow-xl  font-Messiri ${navScroll ? 'py-0' : 'py-2'} sticky top-0 w-full z-50`}>
+        <nav 
+        style={{ backgroundImage: `url(${navBg})` }}
+        className={`appContainer bg-cover drop-shadow-2xl shadow-xl  font-Messiri ${navScroll ? 'py-0' : 'py-2'} sticky top-0 w-full z-50`}>
             <div className="flex flex-wrap items-center justify-between mx-auto py-4">
                 <a
                     // style={{ backgroundImage: `url(${logo})` }}

@@ -16,7 +16,7 @@
     background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
     background-position: 0px 0px, 100% 100%, 0px 100%, 100% 0px;
     /* padding: 10px; */
-    animation: border-dance 4s infinite linear;
+    animation: border-dance 8s infinite linear;
   }
   @keyframes border-dance {
     0% {

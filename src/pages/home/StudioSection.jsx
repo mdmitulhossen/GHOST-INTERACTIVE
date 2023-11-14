@@ -11,12 +11,12 @@ const StudioSection = () => {
                 <div className="mb-10 flex justify-center lg:justify-start w-full">
                     <Title name='our studio' />
                 </div>
-                <p 
-                data-aos="zoom-out-down"
-                data-aos-duration="500"
-                data-aos-offset="50"
-                data-aos-easing="linear"
-                className="font-Messiri xl:text-[55px] lg:text-[50px] md:text-[40px] text-[32px] lg:w-4/5">Our story starts with the
+                <p
+                    data-aos="zoom-out-down"
+                    data-aos-duration="500"
+                    data-aos-offset="50"
+                    data-aos-easing="linear"
+                    className="font-Messiri xl:text-[55px] lg:text-[50px] md:text-[40px] text-[32px] lg:w-4/5">Our story starts with the
                     question, “What if we did
                     this differently?”</p>
                 <p className="font-Messiri text-lg lg:w-4/5">
@@ -26,7 +26,10 @@ const StudioSection = () => {
                     />
 
                 </p>
-                <button className="appBtn rounded-2xl mx-auto lg:mx-0">Learn More</button>
+                <button className="appBtn rounded-2xl mx-auto lg:mx-0">
+                    <span className="inline-block mt-[3px]">Learn More</span>
+                   
+                </button>
             </div>
             <div className="lg:ml-10 relative flex justify-center w-full lg:w-auto">
                 <div className="lg:absolute lg:-right-[200px] lg:-top-[200px] w-full lg:w-auto flex justify-center items-center mt-[100px] lg:mt-0 pb-20 lg:pb-0">

@@ -35,7 +35,7 @@ const Home = () => {
 
     // handle show more game
     const handleShowMoreGame = (count) => {
-        setGameData(gdata?.slice(0, 3+count))
+        setGameData(gdata?.slice(0, 3 + count))
         setShowMoreCount(count)
     }
     // initialize AOS
@@ -63,7 +63,7 @@ const Home = () => {
     return (
         <div
             style={{ backgroundImage: `url(${bg})` }}
-            className="bg-no-repeat bg-cover bg-center bg-[#1e1e1e] bg-blend-darken">
+            className=" bg-blend-darken  bg-contain bg-[#1e1e1e] ">
             <div className="">
                 <ScrollToTop />
                 <Navbar />
@@ -72,7 +72,7 @@ const Home = () => {
                     <Element name="home" className="element">
                         <HeaderSection />
                     </Element>
-                    <Element name="games" className="element mt-12 md:mt-20">
+                    <Element name="games" className="element mt-12 md:mt-20 lg:pt-[100px]">
                         <TextRevealAnimation />
                         <div className="w-full flex justify-center">
                             <Title name='our games' />
@@ -99,22 +99,24 @@ const Home = () => {
                         <div className="mt-[150px]">
                             <GameCard isFlexReverse={false} />
                         </div> */}
-                        <div className="mt-[150px] w-full flex justify-center">
+                        <div className="lg:mt-[150px] mt-[100px] w-full flex justify-center">
                             <button
-                              onClick={() => handleShowMoreGame(showMoreCount+1)}
-                                className="appBtn px-6 py-3 rounded-full">Show More</button>
+                                onClick={() => handleShowMoreGame(showMoreCount + 1)}
+                                className="appBtn px-6 py-2 rounded-full">
+                                <span className="inline-block mt-[3px]">Show More</span>
+                            </button>
                         </div>
                     </Element>
-                    <Element name="studio" className="element mt-12 md:mt-16">
+                    <Element name="studio" className="element mt-12 md:mt-0 lg:pt-[50px] ">
 
-                        <div className="lg:mt-[150px] mt-[100px]">
+                        <div className="lg:mt-0 mt-[100px]">
                             <StudioSection />
                         </div>
 
                     </Element>
 
                     {/* INTERACTIVE and contact*/}
-                    <Element name="contact" className="element mt-12 md:mt-20 appContainer overflow-hidden">
+                    <Element name="contact" className="element mt-12 md:mt-0 appContainer overflow-hidden lg:pt-10">
 
                         <div
                             ref={ref}
@@ -182,7 +184,10 @@ const Home = () => {
                                     data-aos-easing="linear"
                                     data-aos-offset="20"
                                     data-aos-duration="500"
-                                    className="appBtn px-2 py-1 md:px-4 md:py-3 rounded-r-full md:min-w-[150px]">Sign Up</button>
+                                    className="appBtn px-2 py-1 md:px-4 md:py-3 rounded-r-full md:min-w-[150px]">
+                                       <span className="inline-block mt-[3px]">Sign Up</span>
+                                        
+                                        </button>
                             </div>
                         </div>
                     </Element>
