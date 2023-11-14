@@ -36,35 +36,6 @@ const HeaderSection = () => {
     }, [windowSize])
 
 
-    // isAnimation = false
-
-    {/* <motion.div
-      className="box"
-       initial={{ y: -1000, scale: 0.5 }}
-                                animate={{ y: 0, scale: 1 }}
-                                transition={{
-                                    duration: 0.2,
-                                    // ease: [0, 0.71, 0.2, 1.01],
-                                    scale: {
-                                        type: "spring",
-                                        damping: 8,
-                                        stiffness: 50,
-                                        restDelta: 0.001
-                                    }
-                                }} */}
-    // <motion.h1
-    //     initial={{ y: -1000, scale: 0.5 }}
-    //     animate={{ y: 0, scale: 1 }}
-    //     transition={{
-    //         duration: 0.2,
-    //         // ease: [0, 0.71, 0.2, 1.01],
-    //         scale: {
-    //             type: "spring",
-    //             damping: 8,
-    //             stiffness: 50,
-    //             restDelta: 0.001
-    //         }
-    //     }}
 
     if (!isAnimation) {
         return (<div>
@@ -100,14 +71,14 @@ const HeaderSection = () => {
                     >
                         <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
                             <motion.h1
-                                initial={{ y: -1000, scale: 0.5 }}
+                                initial={{ y: -2000, scale: 0.5 }}
                                 animate={{ y: 0, scale: 1 }}
                                 transition={{
-                                    duration: 0.3,
+                                    duration: 1,
                                     // ease: [0, 0.71, 0.2, 1.01],
                                     scale: {
                                         type: "spring",
-                                        damping: 8,
+                                        damping: 3,
                                         stiffness: 50,
                                         restDelta: 0.001
                                     }

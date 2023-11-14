@@ -18,7 +18,6 @@ const Navbar = () => {
             const home = document.getElementById('home');
             home?.classList.remove('active');
         }
-        console.log(to);
     };
 
     const handlewindowScroll = () => { 

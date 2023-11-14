@@ -1,5 +1,5 @@
 import { motion, useAnimation } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, } from "react";
 import { useInView } from "react-intersection-observer";
 
 
@@ -8,7 +8,7 @@ const TextRevealAnimation = ({ text }) => {
     const control = useAnimation();
     const [ref, inView] = useInView();
     // const isInView = useInView(ref, { once: true });
-    console.log(inView)
+
 
 
 
@@ -47,10 +47,10 @@ const TextRevealAnimation = ({ text }) => {
             control.start("vissible");
         }
     }, [control, inView]);
-    console.log(control)
+
 
     return (
-        <motion.h1
+        <motion.p
             ref={ref}
             className=""
             variants={sentance}
@@ -79,7 +79,7 @@ const TextRevealAnimation = ({ text }) => {
                 })
             }
 
-        </motion.h1>
+        </motion.p>
 
     );
 };

@@ -1,6 +1,7 @@
 
 import Title from "../../components/Header/Title";
 import StudioAnimatedSquare from "../../components/StudioAnimatedSquare";
+import TextRevealAnimation from "../../components/animation/TextRevealAnimation";
 
 
 const StudioSection = () => {
@@ -10,11 +11,20 @@ const StudioSection = () => {
                 <div className="mb-10 flex justify-center lg:justify-start w-full">
                     <Title name='our studio' />
                 </div>
-                <p className="font-Messiri xl:text-[55px] lg:text-[50px] md:text-[40px] text-[32px] lg:w-4/5">Our story starts with the
+                <p 
+                data-aos="zoom-out-down"
+                data-aos-duration="500"
+                data-aos-offset="50"
+                data-aos-easing="linear"
+                className="font-Messiri xl:text-[55px] lg:text-[50px] md:text-[40px] text-[32px] lg:w-4/5">Our story starts with the
                     question, “What if we did
                     this differently?”</p>
                 <p className="font-Messiri text-lg lg:w-4/5">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+                    <TextRevealAnimation
+                        text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                    />
+
                 </p>
                 <button className="appBtn rounded-2xl mx-auto lg:mx-0">Learn More</button>
             </div>

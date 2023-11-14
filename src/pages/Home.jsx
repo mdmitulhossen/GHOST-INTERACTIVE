@@ -11,12 +11,37 @@ import { useEffect } from "react";
 import Aos from "aos";
 import 'aos/dist/aos.css'
 import TextRevealAnimation from "../components/animation/TextRevealAnimation";
+import InterractiveSection from "./home/InterractiveSection";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 
 const Home = () => {
     useEffect(() => {
         Aos.init();
     }, [])
+
+    // const ref = useRef(null);
+    const control = useAnimation();
+    const [ref, inView] = useInView();
+    // const isInView = useInView(ref, { once: true });
+
+
+
+
+
+
+    const interectiveBox = {
+        hidden: { x: -100, y: -100, scale: 0.5 },
+        vissible: { x: 0, y: 0, scale: 1 }
+    }
+
+    useEffect(() => {
+        if (inView) {
+            control.start("vissible");
+        }
+    }, [control, inView]);
+
     return (
         <div
             style={{ backgroundImage: `url(${bg})` }}
@@ -29,7 +54,7 @@ const Home = () => {
                         <HeaderSection />
                     </Element>
                     <Element name="games" className="element mt-12 md:mt-20">
-                        <TextRevealAnimation/>
+                        <TextRevealAnimation />
                         <div className="w-full flex justify-center">
                             <Title name='our games' />
                         </div>
@@ -54,17 +79,45 @@ const Home = () => {
                     {/* INTERACTIVE and contact*/}
                     <Element name="contact" className="element mt-12 md:mt-20 appContainer overflow-hidden">
 
-                        <div className="mt-[50px]">
+                        <div
+                            ref={ref}
+                            className="mt-[50px] relative">
                             <div className="">
                                 <div
                                     className="flex flex-col justify-center items-center text-white gap-5 bg-no-repeat bg-cover bg-center pb-10 ">
-                                    <h1
+                                    <motion.h1
+                                        variants={interectiveBox}
+                                        initial="hidden"
+                                        animate={control}
+                                        transition={{
+                                            duration: 1,
+                                            // ease: [0, 0.71, 0.2, 1.01],
+                                            scale: {
+                                                type: "spring",
+                                                damping: 3,
+                                                stiffness: 50,
+                                                restDelta: 0.001
+                                            }
+                                        }}
+
                                         style={{ backgroundImage: `url(${testGif})` }}
-                                        className="xl:text-[180px] lg:text-[160px] md:text-[100px] text-[70px] font-bold font-Gobold text-transparent bg-clip-text bg-cover">INTERACTIVE</h1>
-                                    <p className="font-Messiri text-lg md:text-xl  text-center xl:w-4/6 lg:w-4/5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, animi exercitationem provident officia deleniti obcaecati maxime eaque nobis minima, cumque molestias ad dolorum, voluptatum eos tenetur eligendi</p>
+                                        className="xl:text-[180px] lg:text-[160px] md:text-[100px] text-[70px] font-bold font-Gobold text-transparent bg-clip-text bg-cover">
+                                        INTERACTIVE
+                                        {/* <TextRevealAnimation text="INTERACTIVE" /> */}
+                                    </motion.h1>
+                                    <p
+                                        data-aos="fade-up"
+                                        data-aos-anchor-placement="center-bottom"
+                                        data-aos-easing="linear"
+                                        data-aos-offset="20"
+                                        data-aos-duration="500"
+                                        className="font-Messiri text-lg md:text-xl  text-center xl:w-4/6 lg:w-4/5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, animi exercitationem provident officia deleniti obcaecati maxime eaque nobis minima, cumque molestias ad dolorum, voluptatum eos tenetur eligendi</p>
 
                                 </div>
                             </div>
+
+
+
                         </div>
 
 
@@ -73,12 +126,26 @@ const Home = () => {
                                 <Title name='stay updated' />
                             </div>
                             <div className="text-lg w-full text-center text-white mt-16 flex justify-center font-Messiri">
-                                <p className="xl:w-3/5 md:w-4/5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quaerat quidem aperiam nam distinctio fugiat fugit, qui voluptatum eum laudantium impedit nihil inventore laboriosam sapiente hic repellat, deleniti tempora quod voluptates animi minus labore? Vero, optio voluptate ea iure magnam, vitae quia quidem odio nobis quod dolore obcaecati hic corporis mollitia qui voluptatibus harum adipisci omnis quis cum, tenetur aspernatur!</p>
+                                <p className="xl:w-3/5 md:w-4/5">
+                                    <TextRevealAnimation
+                                        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quo ratione fugiat vel ea a consectetur est autem maiores eligendi in recusandae, doloribus, aut, suscipit reiciendis? Nam nisi eveniet veniam placeat cumque quis facilis unde perferendis error obcaecati magni eius odit voluptatem voluptas consectetur et necessitatibus, velit non officiis quidem!"
+                                    />
+                                </p>
                             </div>
 
                             <div className="font-Messiri flex gap-2 md:gap-5 w-full mt-10 justify-center">
-                                <input type="text" placeholder="Email Address" className="border bg-white pl-6 pr-4  py-3 md:min-w-[300px] focus:outline-0 rounded-l-full rounded-r-lg" />
-                                <button className="appBtn px-4 py-3 rounded-r-full md:min-w-[150px]">Sign Up</button>
+                                <input
+                                    data-aos="fade-down-right"
+                                    data-aos-easing="linear"
+                                    data-aos-offset="20"
+                                    data-aos-duration="500"
+                                    type="text" placeholder="Email Address" className="border bg-white pl-6 pr-4  py-3 md:min-w-[300px] focus:outline-0 rounded-l-full rounded-r-lg" />
+                                <button
+                                    data-aos="fade-down-left"
+                                    data-aos-easing="linear"
+                                    data-aos-offset="20"
+                                    data-aos-duration="500"
+                                    className="appBtn px-4 py-3 rounded-r-full md:min-w-[150px]">Sign Up</button>
                             </div>
                         </div>
 
