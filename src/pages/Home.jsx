@@ -3,13 +3,20 @@ import bg from "../assets/bg.svg";
 import { Element } from "react-scroll";
 import HeaderSection from "./home/HeaderSection";
 import Title from "../components/Header/Title";
-import AnimatedSquare from "../components/AnimatedSquare";
 import GameCard from "../components/cards/GameCard";
 import StudioSection from "./home/StudioSection";
 import testGif from '../assets/game.gif'
 import Footer from "../components/footer/Footer";
+import { useEffect } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import TextRevealAnimation from "../components/animation/TextRevealAnimation";
+
 
 const Home = () => {
+    useEffect(() => {
+        Aos.init();
+    }, [])
     return (
         <div
             style={{ backgroundImage: `url(${bg})` }}
@@ -17,12 +24,12 @@ const Home = () => {
             <div className="">
                 <Navbar />
 
-
                 <div className="appContainer overflow-hidden">
                     <Element name="home" className="element">
                         <HeaderSection />
                     </Element>
                     <Element name="games" className="element mt-12 md:mt-20">
+                        <TextRevealAnimation/>
                         <div className="w-full flex justify-center">
                             <Title name='our games' />
                         </div>
@@ -70,19 +77,19 @@ const Home = () => {
                             </div>
 
                             <div className="font-Messiri flex gap-2 md:gap-5 w-full mt-10 justify-center">
-                                <input type="text" placeholder="Email Address" className="border bg-white pl-6 pr-4  py-3 md:min-w-[300px] focus:outline-0 rounded-l-full rounded-r-lg"/>
+                                <input type="text" placeholder="Email Address" className="border bg-white pl-6 pr-4  py-3 md:min-w-[300px] focus:outline-0 rounded-l-full rounded-r-lg" />
                                 <button className="appBtn px-4 py-3 rounded-r-full md:min-w-[150px]">Sign Up</button>
                             </div>
                         </div>
 
-                       
+
 
                     </Element>
 
                 </div>
 
                 <div className="mt-[150px]">
-                    <Footer/>
+                    <Footer />
                 </div>
             </div>
         </div>

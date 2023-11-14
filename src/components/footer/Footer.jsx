@@ -1,7 +1,7 @@
 
 const Footer = () => {
     return (
-        <div className="border-t-2">
+        <div className="border-t-2 border-[#ddddff]">
             <div className="appContainer flex justify-center lg:justify-between py-8 items-center flex-wrap lg:flex-nowrap space-y-5 lg:space-y-0">
                 <div>
                     <ul className="text-white text-sm xl:text-lg font-semibold font-Messiri flex items-center gap-5">

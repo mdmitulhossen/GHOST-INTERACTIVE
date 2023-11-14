@@ -16,13 +16,13 @@ const Navbar = () => {
     const handleSetActive = (to) => {
         if (to !== 'test1') {
             const home = document.getElementById('home');
-            home.classList.remove('active');
+            home?.classList.remove('active');
         }
         console.log(to);
     };
 
     const handlewindowScroll = () => { 
-        if(window.scrollY >= 90){
+        if(window.scrollY >= 60){
             setNavScroll(true)
         }
         else{
