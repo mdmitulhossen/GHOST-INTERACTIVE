@@ -16,19 +16,26 @@ const StudioSection = () => {
                     data-aos-duration="500"
                     data-aos-offset="50"
                     data-aos-easing="linear"
+                    data-aos-anchor-placement="bottom-bottom"
                     className="font-Messiri xl:text-[55px] lg:text-[50px] md:text-[40px] text-[32px] lg:w-4/5">Our story starts with the
                     question, “What if we did
                     this differently?”</p>
-                <p className="font-Messiri text-lg lg:w-4/5">
-
-                    <TextRevealAnimation
+                <p
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                    data-aos-offset="50"
+                    data-aos-easing="linear"
+                    data-aos-anchor-placement="bottom-bottom"
+                    className="font-Messiri text-lg lg:w-4/5">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    {/* <TextRevealAnimation
                         text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-                    />
+                    /> */}
 
                 </p>
                 <button className="appBtn rounded-2xl mx-auto lg:mx-0">
                     <span className="inline-block mt-[3px]">Learn More</span>
-                   
+
                 </button>
             </div>
             <div className="lg:ml-10 relative flex justify-center w-full lg:w-auto">

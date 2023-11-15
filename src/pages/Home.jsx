@@ -1,6 +1,6 @@
 import Navbar from "../components/Header/Navbar";
 import bg from "../assets/bg.svg";
-import { Element } from "react-scroll";
+import { Element, Events, scrollSpy } from "react-scroll";
 import HeaderSection from "./home/HeaderSection";
 import Title from "../components/Header/Title";
 import GameCard from "../components/cards/GameCard";
@@ -44,6 +44,29 @@ const Home = () => {
     }, [])
 
 
+    useEffect(() => {
+
+        // Registering the 'begin' event and logging it to the console when triggered.
+        Events.scrollEvent.register('begin', (to, element) => {
+            console.log('begin', to, element);
+        });
+
+        // Registering the 'end' event and logging it to the console when triggered.
+        Events.scrollEvent.register('end', (to, element) => {
+            console.log('end', to, element);
+        });
+
+        // Updating scrollSpy when the component mounts.
+        scrollSpy.update();
+        
+        // Returning a cleanup function to remove the registered events when the component unmounts.
+        return () => {
+            Events.scrollEvent.remove('begin');
+            Events.scrollEvent.remove('end');
+        };
+
+        
+    }, []);
 
 
     // iteractive section box animation
@@ -68,11 +91,18 @@ const Home = () => {
                 <ScrollToTop />
                 <Navbar />
 
-                <div className="appContainer overflow-hidden">
-                    <Element name="home" className="element">
+                <div
+                    name="home"
+                    className="appContainer overflow-hidden">
+                    {/* <HeaderSection /> */}
+                    <div
+                        id="home"
+                        className="element">
                         <HeaderSection />
-                    </Element>
-                    <Element name="games" className="element mt-12 md:mt-20 lg:pt-[100px]">
+                    </div>
+
+                    {/* name="games" */}
+                    <div name="games" className="element mt-12 md:mt-20 lg:pt-[100px]">
                         <TextRevealAnimation />
                         <div className="w-full flex justify-center">
                             <Title name='our games' />
@@ -90,15 +120,7 @@ const Home = () => {
                                 )
                             })
                         }
-                        {/* <div className="mt-[150px]">
-                            <GameCard isFlexReverse={false} />
-                        </div>
-                        <div className="mt-[150px]">
-                            <GameCard isFlexReverse={true} />
-                        </div>
-                        <div className="mt-[150px]">
-                            <GameCard isFlexReverse={false} />
-                        </div> */}
+
                         <div className="lg:mt-[150px] mt-[100px] w-full flex justify-center">
                             <button
                                 onClick={() => handleShowMoreGame(showMoreCount + 1)}
@@ -106,17 +128,21 @@ const Home = () => {
                                 <span className="inline-block mt-[3px]">Show More</span>
                             </button>
                         </div>
-                    </Element>
-                    <Element name="studio" className="element mt-12 md:mt-0 lg:pt-[50px] ">
+                    </div>
+
+
+
+                    <div name="studio" className="element mt-12 md:mt-0 lg:pt-[50px] ">
 
                         <div className="lg:mt-0 mt-[100px]">
                             <StudioSection />
                         </div>
 
-                    </Element>
+                    </div>
 
                     {/* INTERACTIVE and contact*/}
-                    <Element name="contact" className="element mt-12 md:mt-0 appContainer overflow-hidden lg:pt-10">
+                    {/* name="contact" */}
+                    <div name="contact" className="element mt-12 md:mt-0 appContainer overflow-hidden lg:pt-10">
 
                         <div
                             ref={ref}
@@ -146,7 +172,7 @@ const Home = () => {
                                     </motion.h1>
                                     <p
                                         data-aos="fade-up"
-                                        data-aos-anchor-placement="center-bottom"
+                                        data-aos-anchor-placement="bottom-bottom"
                                         data-aos-easing="linear"
                                         data-aos-offset="20"
                                         data-aos-duration="500"
@@ -165,32 +191,42 @@ const Home = () => {
                                 <Title name='stay updated' />
                             </div>
                             <div className="text-lg w-full text-center text-white mt-16 flex justify-center font-Messiri">
-                                <p className="xl:w-3/5 md:w-4/5">
-                                    <TextRevealAnimation
+                                <p
+                                    data-aos="fade-up"
+                                    data-aos-duration="500"
+                                    data-aos-offset="50"
+                                    data-aos-easing="linear"
+                                    data-aos-anchor-placement="bottom-bottom"
+                                    className="xl:w-3/5 md:w-4/5">
+
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quo ratione fugiat vel ea a consectetur est autem maiores eligendi in recusandae, doloribus, aut, suscipit reiciendis? Nam nisi eveniet veniam placeat cumque quis facilis unde perferendis error obcaecati magni eius odit voluptatem voluptas consectetur et necessitatibus, velit non officiis quidem!
+                                    {/* <TextRevealAnimation
                                         text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quo ratione fugiat vel ea a consectetur est autem maiores eligendi in recusandae, doloribus, aut, suscipit reiciendis? Nam nisi eveniet veniam placeat cumque quis facilis unde perferendis error obcaecati magni eius odit voluptatem voluptas consectetur et necessitatibus, velit non officiis quidem!"
-                                    />
+                                    /> */}
                                 </p>
                             </div>
 
                             <div className="font-Messiri flex gap-2 md:gap-5 w-full mt-10 justify-center">
                                 <input
-                                    data-aos="fade-down-right"
+                                    data-aos="fade-down"
                                     data-aos-easing="linear"
                                     data-aos-offset="20"
                                     data-aos-duration="500"
+                                    data-aos-anchor-placement="bottom-bottom"
                                     type="text" placeholder="Email Address" className="border bg-white pl-2 pr-2 md:pl-6 md:pr-4 py-1  md:py-3 md:min-w-[300px] focus:outline-0 rounded-l-full rounded-r-lg" />
                                 <button
-                                    data-aos="fade-down-left"
+                                    data-aos="fade-down"
                                     data-aos-easing="linear"
                                     data-aos-offset="20"
                                     data-aos-duration="500"
+                                    data-aos-anchor-placement="bottom-bottom"
                                     className="appBtn px-2 py-1 md:px-4 md:py-3 rounded-r-full md:min-w-[150px]">
-                                       <span className="inline-block mt-[3px]">Sign Up</span>
-                                        
-                                        </button>
+                                    <span className="inline-block mt-[3px]">Sign Up</span>
+
+                                </button>
                             </div>
                         </div>
-                    </Element>
+                    </div>
 
                 </div>
 

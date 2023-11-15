@@ -15,6 +15,7 @@ const Navbar = () => {
     ]
 
     const handleSetActive = (to) => {
+        console.log(to)
         if (to !== 'test1') {
             const home = document.getElementById('home');
             home?.classList.remove('active');
@@ -22,7 +23,7 @@ const Navbar = () => {
     };
 
     const handlewindowScroll = () => {
-        if (window.scrollY >= 60) {
+        if (window.scrollY >= 0) {
             setNavScroll(true)
         }
         else {
@@ -35,7 +36,7 @@ const Navbar = () => {
     return (
         <nav 
         style={{ backgroundImage: `url(${navBg})` }}
-        className={`appContainer bg-cover drop-shadow-2xl shadow-xl  font-Messiri ${navScroll ? 'py-0' : 'py-2'} sticky top-0 w-full z-50`}>
+        className={`appContainer bg-cover drop-shadow-2xl shadow-xl  font-Messiri ${navScroll ? 'py-0' : 'py-2'} sticky top-0 w-full z-50 transition-all duration-0`}>
             <div className="flex flex-wrap items-center justify-between mx-auto py-4">
                 <a
                     // style={{ backgroundImage: `url(${logo})` }}
@@ -50,7 +51,7 @@ const Navbar = () => {
                     }
 
                 </button>
-                <div className={`${menuOpen ? 'block' : 'hidden'} duration-1000  w-full lg:block lg:w-auto`} id="navbar-default">
+                <div className={`${menuOpen ? 'block' : 'hidden'} duration-300 transition-all  w-full lg:block lg:w-auto`} id="navbar-default">
 
                     <ul className="font-medium flex flex-col py-4 lg:p-0 mt-4  lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 space-y-3 lg:space-y-0 duration-200">
 

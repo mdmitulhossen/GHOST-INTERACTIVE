@@ -60,18 +60,18 @@ const TextRevealAnimation = ({ text }) => {
             {
                 // massege?.split('')
                 massege?.split('').map((char, index) => {
-                    return (
+                    return ( 
                         <motion.span
-                            key={char + "-" + index}
-                            // initial={{ opacity: 0 }}
-                            // animate={{ opacity: 1 }}
-                            variants={letterBox}
-                            initial="hidden"
-                            animate={control}
-                            transition={{
-                                duration: 0.1,
-                                delay: index / 200
-                            }}
+                            // key={char + "-" + index}
+                            // // initial={{ opacity: 0 }}
+                            // // animate={{ opacity: 1 }}
+                            // variants={letterBox}
+                            // initial="hidden"
+                            // animate={control}
+                            // transition={{
+                            //     duration: 0.1,
+                            //     delay: index / 200
+                            // }}
                         >
                             {char}
                         </motion.span>

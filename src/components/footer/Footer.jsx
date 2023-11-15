@@ -11,6 +11,7 @@ const Footer = () => {
                             data-aos-offset="10"
                             data-aos-delay='10' 
                             data-aos-easing="linear"
+                            data-aos-anchor-placement="bottom-bottom"
                         ><a href="">
                                 <span className="mr-1 inline-block"><i className='bx bx-copyright'></i></span>
                                 GHOST INTERACTIVE
@@ -21,6 +22,7 @@ const Footer = () => {
                             data-aos-offset="15"
                             data-aos-delay='100'
                              data-aos-easing="linear"
+                             data-aos-anchor-placement="bottom-bottom"
                         ><a href="">
                                 ALL RIGHTS RESERVED
                             </a></li>
@@ -30,6 +32,7 @@ const Footer = () => {
                             data-aos-offset="20"
                             data-aos-delay='200' 
                             data-aos-easing="linear"
+                            data-aos-anchor-placement="bottom-bottom"
                         ><a href="">
                                 PRIVACY POLICY
                             </a></li>
@@ -39,6 +42,7 @@ const Footer = () => {
                             data-aos-offset="10"
                             data-aos-delay='300' 
                             data-aos-easing="linear"
+                            data-aos-anchor-placement="bottom-bottom"
                         ><a href="">
                                 CONTACT US
                             </a></li>
@@ -52,6 +56,7 @@ const Footer = () => {
                         data-aos-offset="10"
                         data-aos-delay='400'
                         data-aos-easing="linear"
+                        data-aos-anchor-placement="bottom-bottom"
                     >CONTACT US</p>
                     <span
                     data-aos="zoom-out"
@@ -59,6 +64,7 @@ const Footer = () => {
                     data-aos-offset="10"
                     data-aos-delay='500'
                     data-aos-easing="linear"
+                    data-aos-anchor-placement="bottom-bottom"
                      className="border border-white rounded-full text-lg xl:text-2xl lg:px-2 px-1 py-2 flex justify-center items-center w-10 cursor-pointer hover:bg-[#3F6CEE] hover:border-[#3F6CEE] duration-200">
                         <i className='bx bxl-facebook'></i>
                     </span>
@@ -68,6 +74,7 @@ const Footer = () => {
                     data-aos-offset="10"
                     data-aos-delay='600'
                     data-aos-easing="linear"
+                    data-aos-anchor-placement="bottom-bottom"
                     className="border border-white rounded-full text-lg xl:text-2xl lg:px-2 px-1 py-2 flex justify-center items-center w-10 cursor-pointer hover:bg-[#3F6CEE] hover:border-[#3F6CEE] duration-200">
                         <i className='bx bxl-instagram' ></i>
                     </span>
@@ -77,6 +84,7 @@ const Footer = () => {
                     data-aos-offset="10"
                     data-aos-delay='700'
                     data-aos-easing="linear"
+                    data-aos-anchor-placement="bottom-bottom"
                     className="border border-white rounded-full text-lg xl:text-2xl lg:px-2 px-1 py-2 flex justify-center items-center w-10 cursor-pointer hover:bg-[#3F6CEE] hover:border-[#3F6CEE] duration-200">
                         <i className='bx bxl-linkedin' ></i>
                     </span>
