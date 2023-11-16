@@ -85,10 +85,10 @@ const Home = () => {
 
 
     return (
-        <div className='bg-[#1e1e1e] w-full h-full'>
+
             <div
-              style={{ backgroundImage: `url(${bg2})` }}
-              className="bg-contain w-full">
+              style={{ backgroundImage: `url(${bg})` }}
+              className="bg-contain bg-fixed w-full bg-[#1e1e1e] mix-blend-darken">
                 <div className="">
                     <ScrollToTop />
                     <Navbar />
@@ -237,7 +237,6 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </div>
     );
 };
 

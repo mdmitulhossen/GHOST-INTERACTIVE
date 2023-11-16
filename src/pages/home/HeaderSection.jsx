@@ -63,7 +63,7 @@ const HeaderSection = () => {
     }
 
     return (
-        <div className=' pt-0 h-screen'>
+        <div className=' pt-0 h-screen '>
             <ScrollContainer>
                 <ScrollPage>
                     <div
@@ -71,6 +71,7 @@ const HeaderSection = () => {
                     >
                         <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
                             <motion.h1
+
                                 initial={{ y: -2000, scale: 0.5 }}
                                 animate={{ y: 0, scale: 1 }}
                                 transition={{
@@ -84,7 +85,7 @@ const HeaderSection = () => {
                                     }
                                 }}
                                 style={{ backgroundImage: `url(${testGif})` }}
-                                className="2xl:text-[390px] xl:text-[320px] box-c lg:text-[280px] md:text-[200px] text-[130px] font-bold font-Gobold text-transparent bg-clip-text bg-cover z-0 lg:mt-[00px] xl:mt-0"
+                                className="2xl:text-[390px] xl:text-[320px] lg:text-[280px] md:text-[200px] text-[130px] font-bold font-Gobold text-transparent bg-clip-text bg-cover z-0  lg:mt-[0px] xl:mt-0"
                             >
                                 ghost
                             </motion.h1>
