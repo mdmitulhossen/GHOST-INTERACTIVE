@@ -88,7 +88,7 @@ const Home = () => {
 
             <div
               style={{ backgroundImage: `url(${bg})` }}
-              className="bg-contain bg-fixed w-full bg-[#1e1e1e] mix-blend-darken">
+              className="bg-contain bg-fixed w-full bg-[#1e1e1e] bg-blend-darken">
                 <div className="">
                     <ScrollToTop />
                     <Navbar />
