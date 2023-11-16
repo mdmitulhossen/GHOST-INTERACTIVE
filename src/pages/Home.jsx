@@ -1,5 +1,6 @@
 import Navbar from "../components/Header/Navbar";
 import bg from "../assets/bg.svg";
+import bg2 from "../assets/bg2.png";
 import { Element, Events, scrollSpy } from "react-scroll";
 import HeaderSection from "./home/HeaderSection";
 import Title from "../components/Header/Title";
@@ -86,8 +87,8 @@ const Home = () => {
     return (
         <div className='bg-[#1e1e1e] w-full h-full'>
             <div
-              style={{ backgroundImage: `url(${bg})` }}
-              className=" bg-blend-darken  bg-contain bg-[#1e1e1e] w-full">
+              style={{ backgroundImage: `url(${bg2})` }}
+              className="bg-contain w-full">
                 <div className="">
                     <ScrollToTop />
                     <Navbar />
