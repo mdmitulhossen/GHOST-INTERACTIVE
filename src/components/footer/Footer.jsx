@@ -9,7 +9,6 @@ const Footer = () => {
                             data-aos="zoom-out"
                             data-aos-duration="200"
                             data-aos-offset="10"
-                            data-aos-delay='10' 
                             data-aos-easing="linear"
                             data-aos-anchor-placement="bottom-bottom"
                         ><a href="">
@@ -20,7 +19,6 @@ const Footer = () => {
                             data-aos="zoom-out"
                             data-aos-duration="200"
                             data-aos-offset="15"
-                            data-aos-delay='100'
                              data-aos-easing="linear"
                              data-aos-anchor-placement="bottom-bottom"
                         ><a href="">
@@ -30,7 +28,6 @@ const Footer = () => {
                             data-aos="zoom-out"
                             data-aos-duration="200"
                             data-aos-offset="20"
-                            data-aos-delay='200' 
                             data-aos-easing="linear"
                             data-aos-anchor-placement="bottom-bottom"
                         ><a href="">
@@ -40,7 +37,6 @@ const Footer = () => {
                             data-aos="zoom-out"
                             data-aos-duration="200"
                             data-aos-offset="10"
-                            data-aos-delay='300' 
                             data-aos-easing="linear"
                             data-aos-anchor-placement="bottom-bottom"
                         ><a href="">
@@ -54,7 +50,6 @@ const Footer = () => {
                         data-aos="zoom-out"
                         data-aos-duration="200"
                         data-aos-offset="10"
-                        data-aos-delay='400'
                         data-aos-easing="linear"
                         data-aos-anchor-placement="bottom-bottom"
                     >CONTACT US</p>
@@ -62,7 +57,6 @@ const Footer = () => {
                     data-aos="zoom-out"
                     data-aos-duration="200"
                     data-aos-offset="10"
-                    data-aos-delay='500'
                     data-aos-easing="linear"
                     data-aos-anchor-placement="bottom-bottom"
                      className="border border-white rounded-full text-lg xl:text-2xl lg:px-2 px-1 py-2 flex justify-center items-center w-10 cursor-pointer hover:bg-[#3F6CEE] hover:border-[#3F6CEE] duration-200">
@@ -72,7 +66,7 @@ const Footer = () => {
                     data-aos="zoom-out"
                     data-aos-duration="200"
                     data-aos-offset="10"
-                    data-aos-delay='600'
+                    // data-aos-delay='600'
                     data-aos-easing="linear"
                     data-aos-anchor-placement="bottom-bottom"
                     className="border border-white rounded-full text-lg xl:text-2xl lg:px-2 px-1 py-2 flex justify-center items-center w-10 cursor-pointer hover:bg-[#3F6CEE] hover:border-[#3F6CEE] duration-200">
@@ -82,7 +76,7 @@ const Footer = () => {
                     data-aos="zoom-out"
                     data-aos-duration="200"
                     data-aos-offset="10"
-                    data-aos-delay='700'
+                    // data-aos-delay='700'
                     data-aos-easing="linear"
                     data-aos-anchor-placement="bottom-bottom"
                     className="border border-white rounded-full text-lg xl:text-2xl lg:px-2 px-1 py-2 flex justify-center items-center w-10 cursor-pointer hover:bg-[#3F6CEE] hover:border-[#3F6CEE] duration-200">

@@ -58,14 +58,14 @@ const Home = () => {
 
         // Updating scrollSpy when the component mounts.
         scrollSpy.update();
-        
+
         // Returning a cleanup function to remove the registered events when the component unmounts.
         return () => {
             Events.scrollEvent.remove('begin');
             Events.scrollEvent.remove('end');
         };
 
-        
+
     }, []);
 
 
@@ -142,7 +142,7 @@ const Home = () => {
 
                     {/* INTERACTIVE and contact*/}
                     {/* name="contact" */}
-                    <div name="contact" className="element mt-12 md:mt-0 appContainer overflow-hidden lg:pt-10">
+                    <div className="element mt-12 md:mt-0 appContainer overflow-hidden lg:pt-10">
 
                         <div
                             ref={ref}
@@ -186,7 +186,7 @@ const Home = () => {
                         </div>
 
 
-                        <div className="mt-20">
+                        <div name="contact" className="pt-20 ">
                             <div className="w-full flex justify-center">
                                 <Title name='stay updated' />
                             </div>
