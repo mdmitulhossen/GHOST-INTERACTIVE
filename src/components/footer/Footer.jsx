@@ -6,39 +6,39 @@ const Footer = () => {
                 <div>
                     <ul className="text-white text-sm xl:text-lg font-semibold font-Messiri flex items-center gap-5">
                         <li
-                            data-aos="zoom-out"
-                            data-aos-duration="200"
-                            data-aos-offset="10"
-                            data-aos-easing="linear"
-                            data-aos-anchor-placement="bottom-bottom"
+                            // data-aos="zoom-out"
+                            // data-aos-duration="200"
+                            // data-aos-offset="10"
+                            // data-aos-easing="linear"
+                            // data-aos-anchor-placement="bottom-bottom"
                         ><a href="">
                                 <span className="mr-1 inline-block"><i className='bx bx-copyright'></i></span>
                                 GHOST INTERACTIVE
                             </a></li>
                         <li
-                            data-aos="zoom-out"
-                            data-aos-duration="200"
-                            data-aos-offset="15"
-                             data-aos-easing="linear"
-                             data-aos-anchor-placement="bottom-bottom"
+                            // data-aos="zoom-out"
+                            // data-aos-duration="200"
+                            // data-aos-offset="15"
+                            //  data-aos-easing="linear"
+                            //  data-aos-anchor-placement="bottom-bottom"
                         ><a href="">
                                 ALL RIGHTS RESERVED
                             </a></li>
                         <li
-                            data-aos="zoom-out"
-                            data-aos-duration="200"
-                            data-aos-offset="20"
-                            data-aos-easing="linear"
-                            data-aos-anchor-placement="bottom-bottom"
+                            // data-aos="zoom-out"
+                            // data-aos-duration="200"
+                            // data-aos-offset="20"
+                            // data-aos-easing="linear"
+                            // data-aos-anchor-placement="bottom-bottom"
                         ><a href="">
                                 PRIVACY POLICY
                             </a></li>
                         <li
-                            data-aos="zoom-out"
-                            data-aos-duration="200"
-                            data-aos-offset="10"
-                            data-aos-easing="linear"
-                            data-aos-anchor-placement="bottom-bottom"
+                            // data-aos="zoom-out"
+                            // data-aos-duration="200"
+                            // data-aos-offset="10"
+                            // data-aos-easing="linear"
+                            // data-aos-anchor-placement="bottom-bottom"
                         ><a href="">
                                 CONTACT US
                             </a></li>
@@ -47,38 +47,38 @@ const Footer = () => {
                 {/* right side contact us */}
                 <div className="text-white text-sm xl:text-lg font-semibold font-Messiri flex gap-5 items-center ">
                     <p
-                        data-aos="zoom-out"
-                        data-aos-duration="200"
-                        data-aos-offset="10"
-                        data-aos-easing="linear"
-                        data-aos-anchor-placement="bottom-bottom"
+                        // data-aos="zoom-out"
+                        // data-aos-duration="200"
+                        // data-aos-offset="10"
+                        // data-aos-easing="linear"
+                        // data-aos-anchor-placement="bottom-bottom"
                     >CONTACT US</p>
                     <span
-                    data-aos="zoom-out"
-                    data-aos-duration="200"
-                    data-aos-offset="10"
-                    data-aos-easing="linear"
-                    data-aos-anchor-placement="bottom-bottom"
+                    // data-aos="zoom-out"
+                    // data-aos-duration="200"
+                    // data-aos-offset="10"
+                    // data-aos-easing="linear"
+                    // data-aos-anchor-placement="bottom-bottom"
                      className="border border-white rounded-full text-lg xl:text-2xl lg:px-2 px-1 py-2 flex justify-center items-center w-10 cursor-pointer hover:bg-[#3F6CEE] hover:border-[#3F6CEE] duration-200">
                         <i className='bx bxl-facebook'></i>
                     </span>
                     <span 
-                    data-aos="zoom-out"
-                    data-aos-duration="200"
-                    data-aos-offset="10"
-                    // data-aos-delay='600'
-                    data-aos-easing="linear"
-                    data-aos-anchor-placement="bottom-bottom"
+                    // data-aos="zoom-out"
+                    // data-aos-duration="200"
+                    // data-aos-offset="10"
+                    // // data-aos-delay='600'
+                    // data-aos-easing="linear"
+                    // data-aos-anchor-placement="bottom-bottom"
                     className="border border-white rounded-full text-lg xl:text-2xl lg:px-2 px-1 py-2 flex justify-center items-center w-10 cursor-pointer hover:bg-[#3F6CEE] hover:border-[#3F6CEE] duration-200">
                         <i className='bx bxl-instagram' ></i>
                     </span>
                     <span 
-                    data-aos="zoom-out"
-                    data-aos-duration="200"
-                    data-aos-offset="10"
-                    // data-aos-delay='700'
-                    data-aos-easing="linear"
-                    data-aos-anchor-placement="bottom-bottom"
+                    // data-aos="zoom-out"
+                    // data-aos-duration="200"
+                    // data-aos-offset="10"
+                    // // data-aos-delay='700'
+                    // data-aos-easing="linear"
+                    // data-aos-anchor-placement="bottom-bottom"
                     className="border border-white rounded-full text-lg xl:text-2xl lg:px-2 px-1 py-2 flex justify-center items-center w-10 cursor-pointer hover:bg-[#3F6CEE] hover:border-[#3F6CEE] duration-200">
                         <i className='bx bxl-linkedin' ></i>
                     </span>

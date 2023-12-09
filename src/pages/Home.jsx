@@ -1,6 +1,6 @@
 import Navbar from "../components/Header/Navbar";
 import bg from "../assets/bg.svg";
-import { Element, Events, scrollSpy } from "react-scroll";
+import {  Events, scrollSpy } from "react-scroll";
 import HeaderSection from "./home/HeaderSection";
 import Title from "../components/Header/Title";
 import GameCard from "../components/cards/GameCard";
@@ -58,14 +58,14 @@ const Home = () => {
 
         // Updating scrollSpy when the component mounts.
         scrollSpy.update();
-        
+
         // Returning a cleanup function to remove the registered events when the component unmounts.
         return () => {
             Events.scrollEvent.remove('begin');
             Events.scrollEvent.remove('end');
         };
 
-        
+
     }, []);
 
 
@@ -92,17 +92,17 @@ const Home = () => {
                 <Navbar />
 
                 <div
-                    name="home"
+
                     className="appContainer overflow-hidden">
                     {/* <HeaderSection /> */}
                     <div
-                        id="home"
+                        name="home"
                         className="element">
                         <HeaderSection />
                     </div>
 
                     {/* name="games" */}
-                    <div name="games" className="element mt-12 md:mt-20 lg:pt-[100px]">
+                    <div name="games" className="element pt-12 md:pt-20 lg:pt-[100px]">
                         <TextRevealAnimation />
                         <div className="w-full flex justify-center">
                             <Title name='our games' />

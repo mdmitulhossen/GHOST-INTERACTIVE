@@ -38,9 +38,9 @@ const HeaderSection = () => {
 
 
     if (!isAnimation) {
-        return (<div>
+        return (
             <div
-                className="flex flex-col justify-center items-center text-white gap-5 bg-no-repeat bg-cover bg-center pb-10 relative w-full z-0"
+                className="flex flex-col justify-center items-center text-white gap-5 bg-no-repeat bg-cover bg-center pb-10 w-full z-20 pt-0 h-screen"
             >
                 <h1
 
@@ -49,7 +49,7 @@ const HeaderSection = () => {
                 >
                     ghost
                 </h1>
-                <p className="font-Messiri text-base md:text-xl text-center xl:w-3/6 lg:w-3/5 z-50 mx-auto text-white w-4/5">
+                <p className="font-Messiri text-base md:text-xl text-center xl:w-3/6 lg:w-3/5 z-0 mx-auto text-white w-4/5">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, animi
                     exercitationem provident officia deleniti obcaecati maxime eaque nobis
                     minima, cumque molestias ad dolorum, voluptatum eos tenetur eligendi
@@ -59,7 +59,7 @@ const HeaderSection = () => {
                 </p>
 
             </div>
-        </div>)
+        )
     }
 
     return (
